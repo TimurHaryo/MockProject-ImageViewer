@@ -37,9 +37,7 @@ class ImageIndicatorViewHolder private constructor(
 
     fun updateSelected(isSelected: Boolean, isSpecialCase: Boolean) {
         with(binding) {
-            if (isSelected) {
-                this.isSelected = isSelected
-            }
+            this.isSelected = isSelected
             invalidateAll()
             parentImageIndicator.strokeColor =
                 if (isSelected) root.context.getColor(R.color.sb_main) else Color.TRANSPARENT

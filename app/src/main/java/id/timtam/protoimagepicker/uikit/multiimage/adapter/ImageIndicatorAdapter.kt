@@ -135,7 +135,7 @@ class ImageIndicatorAdapter(
                 if (isFromScrapView) {
                     (vh as? ImageIndicatorViewHolder)?.updateSelected(true, isFromScrapView || position == 4)
                 }
-                requestLayout()
+//                requestLayout()
             }
         } else {
             v?.run {
@@ -146,7 +146,7 @@ class ImageIndicatorAdapter(
                 if (isFromScrapView) {
                     (vh as? ImageIndicatorViewHolder)?.updateSelected(true, isFromScrapView || position == 4)
                 }
-                requestLayout()
+//                requestLayout()
             }
         }
 
@@ -174,7 +174,7 @@ class ImageIndicatorAdapter(
                 if (isFromScrapView) {
                     (vh as? ImageIndicatorViewHolder)?.updateSelected(false, isFromScrapView || position == 4)
                 }
-                requestLayout()
+//                requestLayout()
             }
         } else {
             v?.run {
@@ -185,7 +185,7 @@ class ImageIndicatorAdapter(
                 if (isFromScrapView) {
                     (vh as? ImageIndicatorViewHolder)?.updateSelected(false, isFromScrapView || position == 4)
                 }
-                requestLayout()
+//                requestLayout()
             }
         }
 //        currentSelected = -1

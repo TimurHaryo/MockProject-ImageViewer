@@ -117,6 +117,7 @@ class ImageIndicator : RecyclerView, ImageIndicatorAdapter.OnImageIndicatorListe
                     recycler.getViewForPosition(position),
                     findViewHolderForItemId(position.toLong())
                 )
+                mIndicatorAdapter?.notifyDataSetChanged()
                 isFromIndicatorClick = false
 //                layoutManager?.scrollToPosition(position)
 

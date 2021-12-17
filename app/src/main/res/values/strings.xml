@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ProtoImagePicker</string>
+    <string name="per_page_indicator">%1$d/%2$d</string>
+</resources>

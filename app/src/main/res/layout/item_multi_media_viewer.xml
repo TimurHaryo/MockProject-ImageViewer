@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="image"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/parent_iv_multi_media_viewer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.github.piasy.biv.view.BigImageView
+            android:id="@+id/big_iv_multi_media_viewer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:failureImageInitScaleType="center"
+            app:imageUrl="@{image}"
+            app:initScaleType="fitCenter"
+            app:optimizeDisplay="true"/>
+    </LinearLayout>
+</layout>

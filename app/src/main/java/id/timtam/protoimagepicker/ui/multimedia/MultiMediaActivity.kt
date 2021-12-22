@@ -2,7 +2,6 @@ package id.timtam.protoimagepicker.ui.multimedia
 
 import android.content.Context
 import android.content.Intent
-import android.os.Bundle
 import android.util.Log
 import id.timtam.protoimagepicker.R
 import id.timtam.protoimagepicker.abstraction.BaseActivityBinding
@@ -59,7 +58,8 @@ class MultiMediaActivity:
     }
 
     override fun onImageClick() {
-
+        isStreamControlVisible = !isStreamControlVisible
+        toggleStreamControlVisibility(isStreamControlVisible)
     }
 
     private fun toggleStreamControlVisibility(isVisible: Boolean) {
@@ -82,7 +82,6 @@ class MultiMediaActivity:
 
         private const val ARG_IMAGES_POSITION = "ARG_IMAGES_POSITION_MULTI"
         private const val ARG_STREAM = "ARG_STREAM_MULTI"
-        private const val ARG_BUNDLE = "ARG_BUNDLE"
 
         fun launch(
             context: Context,

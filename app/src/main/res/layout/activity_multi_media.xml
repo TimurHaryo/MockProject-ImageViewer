@@ -3,10 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -31,10 +27,14 @@
             android:paddingHorizontal="6dp"
             android:clipToPadding="false"
             android:orientation="horizontal"
+            android:alpha="0"
+            android:translationY="@dimen/item_gap_96"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:listitem="@layout/item_image_indicator"/>
+            tools:listitem="@layout/item_image_indicator"
+            tools:alpha="1"
+            tools:translationY="0dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

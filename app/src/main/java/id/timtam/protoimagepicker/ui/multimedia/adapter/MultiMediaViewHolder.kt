@@ -12,7 +12,7 @@ class MultiMediaViewHolder private constructor(
         with(binding) {
             image = data
 
-            root.setOnClickListener {
+            bigIvMultiMediaViewer.setOnClickListener {
                 listener?.onImageClick()
             }
         }

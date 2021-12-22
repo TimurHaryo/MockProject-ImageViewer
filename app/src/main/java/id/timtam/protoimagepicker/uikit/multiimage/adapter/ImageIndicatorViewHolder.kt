@@ -11,34 +11,25 @@ class ImageIndicatorViewHolder private constructor(
 ) : ViewHolder<ItemImageIndicatorBinding, Pair<String, Boolean>>(itemView) {
 
     override fun bind(data: Pair<String, Boolean>) {
-        data.let { (imageUrl, isSelected) ->
-            binding.imageUrl = imageUrl
-            binding.isSelected = isSelected
-        }
 
-//        binding.root.setOnClickListener {
-//            binding.parentImageIndicator.strokeColor = binding.root.context.getColor(R.color.sb_main)
-//            listener?.onClick(layoutPosition)
-//        }
     }
 
     fun bind(data: Pair<String, Boolean>, position: Int) {
         data.let { (imageUrl, isSelected) ->
             binding.imageUrl = imageUrl
-            binding.isSelected = isSelected
+
+            updateSelected(isSelected)
         }
 
         binding.root.setOnClickListener {
             binding.parentImageIndicator.strokeColor = binding.root.context.getColor(R.color.sb_main)
-            updateSelected(isSelected = true, isSpecialCase = false)
+            updateSelected(true)
             listener?.onClick(position)
         }
     }
 
-    fun updateSelected(isSelected: Boolean, isSpecialCase: Boolean) {
+    private fun updateSelected(isSelected: Boolean) {
         with(binding) {
-            this.isSelected = isSelected
-            invalidateAll()
             parentImageIndicator.strokeColor =
                 if (isSelected) root.context.getColor(R.color.sb_main) else Color.TRANSPARENT
         }

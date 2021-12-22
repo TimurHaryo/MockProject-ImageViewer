@@ -8,10 +8,6 @@
         <variable
             name="imageUrl"
             type="String" />
-
-        <variable
-            name="isSelected"
-            type="Boolean" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -20,7 +16,6 @@
         android:layout_height="64dp"
         android:layout_marginHorizontal="6dp"
         app:cardCornerRadius="4dp"
-        app:strokeColor="@{isSelected ? @color/sb_main : @android:color/transparent}"
         app:strokeWidth="4dp"
         tools:strokeColor="@color/sb_main">
 
